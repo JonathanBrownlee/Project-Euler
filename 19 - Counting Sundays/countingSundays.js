@@ -16,18 +16,14 @@ var main = function() {
 	var dayOfWeek = 1, total = 0;
 	
 	for (var year = 1901; year <= 2000; year++) {
-		// console.log(year, year % 4, year % 100, year % 400);
 		if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
 			months["Feburary"] = 29;
 		} else {
 			months["Feburary"] = 28;
 		}
 		for (var month in months) {
-			/*if (month == "October") {
-				return;
-			}*/
 			if (dayOfWeek == 6) {
-				console.log(month, year);
+				//console.log(month, year);
 				total++;
 			}
 			for (var day = 1; day <= months[month]; day++) {
