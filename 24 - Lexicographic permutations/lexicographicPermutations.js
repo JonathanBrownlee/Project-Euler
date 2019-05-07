@@ -23,4 +23,4 @@ var getAllPerms = function (num) {
 }
 
 
-console.log(main('0123456789', 999999));
+console.log(main('0123456789', 999999)); // The millionth digit is actually 999,999th in an array
