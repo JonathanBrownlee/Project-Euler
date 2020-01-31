@@ -10,7 +10,6 @@ var main = () => {
             total += temp;
         }
     }
-
     return total;
 };
 
