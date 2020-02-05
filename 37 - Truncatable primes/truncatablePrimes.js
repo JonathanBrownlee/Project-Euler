@@ -18,14 +18,16 @@ while (arr.length < 11) {
         var leftTruncate = i.toString();
         var rightTruncate = i.toString();
         primes.push(i)
-        while(leftTruncate.length - 1) {
+        while (leftTruncate.length - 1) {
             leftTruncate = leftTruncate.substr(1);
             if (!primes.includes(parseInt(leftTruncate))) {
                 flag = 0;
+                break;
             }
             rightTruncate = rightTruncate.substring(0, rightTruncate.length - 1);
             if (!primes.includes(parseInt(rightTruncate))) {
                 flag = 0;
+                break;
             }
         }
         if (flag) {
