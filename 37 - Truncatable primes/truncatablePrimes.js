@@ -1,4 +1,4 @@
-var primes = [2, 3, 5, 7]
+var primes = [2, 3, 5, 7];
 var arr = [];
 var i = 2;
 
@@ -15,18 +15,16 @@ while (arr.length < 11) {
     i++;
     if (isPrime(i)) {
         var flag = 1;
-        var currentPrime = i.toString();
+        var leftTruncate = i.toString();
+        var rightTruncate = i.toString();
         primes.push(i)
-        while(currentPrime.length - 1) {
-            currentPrime = currentPrime.substr(1);
-            if (!primes.includes(parseInt(currentPrime))) {
+        while(leftTruncate.length - 1) {
+            leftTruncate = leftTruncate.substr(1);
+            if (!primes.includes(parseInt(leftTruncate))) {
                 flag = 0;
             }
-        }
-        currentPrime = i.toString();
-        while(currentPrime.length - 1) {
-            currentPrime = currentPrime.substring(0, currentPrime.length - 1);
-            if (!primes.includes(parseInt(currentPrime))) {
+            rightTruncate = rightTruncate.substring(0, rightTruncate.length - 1);
+            if (!primes.includes(parseInt(rightTruncate))) {
                 flag = 0;
             }
         }
@@ -36,6 +34,4 @@ while (arr.length < 11) {
     }
 }
 
-console.log(arr.reduce(function(a, b){
-    return a + b;
-}, 0));
+console.log(arr.reduce((a, b) => a + b, 0));
